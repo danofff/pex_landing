@@ -1,0 +1,40 @@
+@import "_variables";
+
+
+.photography {
+    position: relative;
+    height: 42rem;
+    background: url('../../img/Layer27.png') center/cover no-repeat;
+    .photography__container {
+        position: absolute;
+        bottom: 6rem;
+        left: 12rem;
+        max-width: 520px;
+        font-family: $main-font-family;
+        color: $main-text-color;
+        .photography__button {
+            border: 2px solid $main-text-color;
+            border-radius: 2rem;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 0.8rem;
+            width: 9rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: inherit;
+        }
+        .photography__title {
+            font-weight: 100;
+        }
+
+        .photography__photograph {
+            display: flex;
+            align-items: center;
+            small {
+                margin-left: 0.5rem;
+            }
+        }
+        @media screen and (max-width: $media-screen-for-left-margin){
+            left: $left-margin-responsive;
+        }
+    }
+}

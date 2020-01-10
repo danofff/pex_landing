@@ -1,0 +1,109 @@
+@import "_variables";
+
+.main-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    .logo {
+        color: $third-color;
+        font-size: 2rem;
+        font-family: $header-font-family;
+    }
+    .main-menu {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        .main-menu--navigation {
+            height: 100px;
+            .main-menu--navigation-items {
+                margin: 0;
+                list-style: none;
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+        }
+        @media screen and (max-width: $media-screen-responsive){
+            display: none;
+        }
+    }
+    .main-menu--search {
+        height: 3rem;
+        background-color: $main-text-color;
+        border-radius: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 1rem;
+        overflow: hidden;
+        .search {
+            border: none;
+            padding-left: 1rem;
+            &:focus {
+                outline: none;
+            }
+        }
+        button[type="submit"] {
+            border: none;
+            background: none;
+            cursor: pointer;
+            height: 100%;
+            padding: 0 1rem;
+            &:focus {
+                outline: none;
+            }
+            i {
+                color: $search-icon-color;
+            }
+        }
+    }
+    .toggle-button__container {
+        display: none;
+        .toggle-button {
+            width: 3rem;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding-top: 0;
+            padding-bottom: 0;
+            vertical-align: middle;
+        }
+        
+        .toggle-button:focus {
+            outline: none;
+        }
+        
+        .toggle-button__bar {
+            width: 100%;
+            height: 0.2rem;
+            background: $main-text-color;
+            display: block;
+            margin: 0.6rem 0;
+        }
+        @media screen and (max-width: $media-screen-responsive) {
+            display: block;
+        }
+    }
+    @media screen and (max-width: $media-screen-responsive) {
+        .logo, .toggle-button__container {
+            margin-top: 2rem;
+        }
+    }
+}
+
+.main-menu--navigation-item {
+    margin-right: 3rem;
+    a {
+        color: $main-text-color;
+        text-decoration: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0);
+        padding-bottom: 1rem;
+        transition: border-bottom .1s linear;
+        &:hover {
+            border-bottom: 2px solid $main-text-color;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import "_variables";
+
+.wicked {
+    background: url('../../img/Layer29.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wicked__container {
+        max-width: 800px;
+        margin: 10rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $main-text-color;
+        font-family: $main-font-family;
+        .wicked__title {
+            font-size: 2rem;
+            font-weight: 100;
+            text-align: center;
+            margin: 0;
+        }
+        .wicked__description {
+            line-height: 2;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .wicked__button{
+            background-color: $main-text-color;
+            color: $third-color;
+        }
+    }
+}

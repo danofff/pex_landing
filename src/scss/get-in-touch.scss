@@ -1,0 +1,32 @@
+@import "_variables";
+
+.get-in-touch {
+    height: 22rem; 
+    background-color: $third-color;
+    padding-top: 6rem;
+    .get-in-touch__container {
+        max-width: 400px;
+        color: $main-text-color;
+        margin-left: 12rem;
+        font-family: $main-font-family;
+        .get-in-touch__title {
+            margin: 0;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .get-in-touch__description {
+            line-height: 2;
+            margin: 2rem 0;
+        }
+
+        .get-in-touch__email {
+            text-decoration: underline;
+            cursor: pointer;
+            color: inherit;
+        }
+        @media screen and (max-width: $media-screen-for-left-margin){
+            margin-left: $left-margin-responsive;
+        }
+    }
+}
